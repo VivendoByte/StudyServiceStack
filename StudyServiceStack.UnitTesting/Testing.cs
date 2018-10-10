@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace StudyServiceStack.UnitTesting
@@ -8,10 +9,18 @@ namespace StudyServiceStack.UnitTesting
     [TestClass]
     public class Testing
     {
-        string filename = @"C:\Users\idamiani\Desktop\SampleData.json";
-        int iterations = 20;
+        static string filename;
+        int iterations = 5;
         IReader reader;
         Stopwatch sw = new Stopwatch();
+
+        [ClassInitialize]
+        public static void Setup(TestContext context)
+        {
+            filename = Path.Combine(System.Environment.CurrentDirectory, @"..\..\..\Data\SampleData.json");
+            bool exists = File.Exists(filename);
+            Assert.IsTrue(exists);
+        }
 
         [TestMethod]
         public void TestOption1_File()
