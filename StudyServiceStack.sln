@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudyServiceStack.ConsoleTe
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{9DE317CC-1362-4A3A-A08E-7F5B3F32B2B2}"
 	ProjectSection(SolutionItems) = preProject
-		..\..\..\..\Desktop\SampleData.json = ..\..\..\..\Desktop\SampleData.json
+		Data\SampleData.json = Data\SampleData.json
 	EndProjectSection
 EndProject
 Global
